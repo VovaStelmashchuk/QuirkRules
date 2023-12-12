@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "io.github.vovastelmashchuk"
-version = "0.0.1"
+version = "0.0.4"
 
 dependencies {
     compileOnly("io.gitlab.arturbosch.detekt:detekt-api:1.23.4")
@@ -25,19 +25,19 @@ tasks.withType<Test>().configureEach {
 }
 
 publishing {
-    publications {
-        create<MavenPublication>("mavenJava") {
-            from(components["java"])
-        }
-    }
     repositories {
         maven {
             name = "quirksrule"
-            url = uri("https://maven.pkg.github.com/vovastelmashchuk/quirksrule")
+            url = uri("https://maven.pkg.github.com/VovaStelmashchuk/QuirkRules")
             credentials {
                 username = System.getenv("GITHUB_ACTOR")
                 password = System.getenv("GITHUB_TOKEN")
             }
+        }
+    }
+    publications {
+        create<MavenPublication>("mavenJava") {
+            from(components["java"])
         }
     }
 }
