@@ -2,13 +2,6 @@
 
 **Unique, unconventional Detekt rules, expanding linting beyond the norm. Perfect for ous.**
 
-## How to use it
-
-2. Edit MyRule to fit your use case
-3. Share your rule! You can upload your rule to [Maven Central][maven_central] if you want. If you don't want to do all
-   the steps that Maven Central requires you can just share your rule using [jitpack][jitpack].
-4. Extra: you can remove all this README and explain what your rule does and how to configure it.
-
 ## Documentation
 
 You can find the documentation about how to write [custom rules here][custom_rule_documentation].
@@ -18,10 +11,6 @@ You can find the documentation about how to write [custom rules here][custom_rul
 - Remember that, by default, all rules are disabled. To configure your rules edit the file in
 `src/main/resources/config/config.yml`.
 - Once you have your rules ready you can publish them on the [detekt's marketplace][detekt_marketplace] to improve the discoverability. To do so create a PR editing [this file][detekt_marketplace_edit].
-
-[create_template]: https://github.com/detekt/detekt-custom-rule-template/generate
-
-[maven_central]: https://search.maven.org/
 
 [custom_rule_documentation]: https://detekt.github.io/detekt/extensions.html
 

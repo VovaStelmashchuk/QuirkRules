@@ -33,7 +33,7 @@ publishing {
     repositories {
         maven {
             name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/vovastelmashchuk/quirksruleset")
+            url = uri("https://maven.pkg.github.com/vovastelmashchuk/quirksrule")
             credentials {
                 username = System.getenv("GITHUB_ACTOR")
                 password = System.getenv("GITHUB_TOKEN")
