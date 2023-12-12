@@ -3,8 +3,8 @@ plugins {
     `maven-publish`
 }
 
-group = "org.example.detekt"
-version = "1.0-SNAPSHOT"
+group = "io.github.vovastelmashchuk"
+version = "0.0.1"
 
 dependencies {
     compileOnly("io.gitlab.arturbosch.detekt:detekt-api:1.23.4")
@@ -28,6 +28,16 @@ publishing {
     publications {
         create<MavenPublication>("mavenJava") {
             from(components["java"])
+        }
+    }
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/vovastelmashchuk/quirksruleset")
+            credentials {
+                username = System.getenv("GITHUB_ACTOR")
+                password = System.getenv("GITHUB_TOKEN")
+            }
         }
     }
 }
